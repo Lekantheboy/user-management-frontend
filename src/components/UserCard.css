@@ -1,0 +1,162 @@
+/* UserCard.css */
+.user-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.user-card.clickable {
+  cursor: pointer;
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.user-card.clickable:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+  border-color: #667eea;
+}
+
+.user-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.user-name-link:hover .user-name {
+  color: #667eea;
+  text-decoration: underline;
+}
+
+.user-name {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-admin {
+  background-color: #dc3545;
+  color: white;
+}
+
+.badge-manager {
+  background-color: #fd7e14;
+  color: white;
+}
+
+.badge-user {
+  background-color: #6c757d;
+  color: white;
+}
+
+.user-actions {
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.user-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.user-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.user-detail:last-child {
+  border-bottom: none;
+}
+
+.user-detail .label {
+  font-weight: 600;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.user-detail .value {
+  color: #333;
+  font-size: 0.9rem;
+  text-align: right;
+  word-break: break-all;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .user-card {
+    padding: 1rem;
+  }
+  
+  .user-card-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .user-actions {
+    justify-content: flex-end;
+  }
+  
+  .user-detail {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .user-detail .value {
+    text-align: left;
+  }
+}
+
+.user-card-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f8f9fa;
+  text-align: center;
+}
+
+.click-hint {
+  color: #667eea;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.user-card.clickable:hover .click-hint {
+  opacity: 1;
+}
